@@ -230,7 +230,7 @@ Use getArtistByIndex to do the following:
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, number) {
-  return `the artist at ${array [number] ["id"]} is ${array [number] ["name"]}`
+  return `the artist at index ${array [number] ["id"]} is ${array [number] ["name"]}`
 }
 console.log(getArtistByIndex(artists, 0))
 
@@ -244,8 +244,8 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+function get20s(array) {
+  
 }
 
 
@@ -259,12 +259,11 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(array){
-  array.pop();
-  return array;
+function removeArtist(array, number){
+  array.splice(number,1);
+  return array.length;
 }
-console.log(removeArtist(artists))
-console.log(artists.length)
+console.log(removeArtist(artists, 15))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -304,10 +303,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  let leg = []
+  for(let age = 0; age < array.length; age++){
+    if(array[age].paintings > 100){
+    leg.push(array[age].name)
+    }
+  }
+  return leg
 }
-
+console.log(lotsOfArt(artists))
 
 /* ***** END OF TASKS ***** */
 
