@@ -208,17 +208,17 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log([0] .name)
+console.log(artists[0].name)
 
 //(2) Bio of the third artist (2nd index) in the array 
-console.log([2] .bio)
+console.log(artists[2].bio)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
-review[9] .feedback = "Vincent Van Gogh"
-console.log([9] .name)
+artists[9].feedback = "Vincent Van Gogh"
+console.log([9].name)
 /* I really wanted to rename it Vincent Van making all this sweet Dough just FYI */
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -282,9 +282,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array) {
+  array.push({id: 19,
+  name: "Cesar 'jay' Soto-Tornero,",
+  years: "1997 - current day,",
+  genre: "Web Design,",
+  nationality: "American",
+  bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi officia voluptas, aut delectus fugit sapiente consequatur ratione. Ex repellendus odit dolorem illum consectetur molestiae id qui iure reiciendis sequi."})
+  
+  
+  return array
 }
+console.log(addArtist(artists))
 
 
 
