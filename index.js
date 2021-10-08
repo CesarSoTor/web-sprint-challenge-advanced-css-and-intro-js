@@ -244,9 +244,17 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(array) {
-  
+function get20s(array){
+  let leg = [];
+  for(let i = 0; i < array.length; i++){
+    let split1 = array[i].years.split(" - ");
+    if (1900 <= parseInt(split1[0]) &&  parseInt(split1[1]) < 2000 ){
+      leg.push(array[i].name);
+    }
+  }
+  return leg;
 }
+console.log(get20s(artists))
 
 
 
